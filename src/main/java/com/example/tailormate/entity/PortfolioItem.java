@@ -21,16 +21,16 @@ public class PortfolioItem {
     @JoinColumn(name = "tailor_id")
     private Tailor tailor;
 
-    @Column(name = "title_text", length = 45)
+    @Column(name = "title_text", length = 1000)
     private String titleText;
 
-    @Column(name = "image", length = 45)
+    @Column(name = "image", length = 1000)
     private String image;
 
-    @Column(name = "description", length = 100)
+    @Column(name = "description", length = 1000)
     private String description;
 
-    @Column(name = "created_at", length = 45)
+    @Column(name = "created_at", length = 1000)
     private String createdAt;
 
     // Constructors, getters, and setters

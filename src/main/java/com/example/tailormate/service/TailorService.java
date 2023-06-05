@@ -1,6 +1,5 @@
 package com.example.tailormate.service;
 
-import com.example.tailormate.entity.Customers;
 import com.example.tailormate.entity.Tailor;
 
 import java.util.List;
@@ -12,4 +11,8 @@ public interface TailorService {
     Tailor getTailor(Integer id);
 
     Tailor findTailorByEmailAddress(String email);
+
+    Tailor updateTailor(Tailor user);
+
+    boolean existsByEmail(String email);
 }

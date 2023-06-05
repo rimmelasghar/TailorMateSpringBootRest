@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -46,4 +47,27 @@ public class CustomerServiceImpl implements CustomerService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Customer doesn't exist");
         }
 }
+
+    @Override
+    public boolean existsByEmail(String email) {
+        return customerRepository.existsByEmailAddress(email);
+    }
+
+    @Override
+    public void updateCustomer(Customers customer) {
+        Optional<Customers> updatedCustomer = customerRepository.findById(customer.getCustomerId());
+        Customers existingCustomer = updatedCustomer.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Customer doesn't exist"));
+
+        // Update the properties of existingTailor with the values from tailor
+        existingCustomer.setEmailAddress(customer.getEmailAddress());
+        existingCustomer.setUsername(customer.getUsername());
+        existingCustomer.setBio(customer.getBio());
+        existingCustomer.setLocation(customer.getLocation());
+        existingCustomer.setAvatar(customer.getAvatar());
+        existingCustomer.setCreatedAt(customer.getCreatedAt());
+        existingCustomer.setUpdatedAt(customer.getUpdatedAt());
+        existingCustomer.setAreaOfSpecialization(customer.getAreaOfSpecialization());
+        existingCustomer.setExperience(customer.getExperience());
+        existingCustomer.setPhoneNumber(customer.getPhoneNumber());
+    }
 }

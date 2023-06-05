@@ -4,6 +4,9 @@ import com.example.tailormate.entity.Customers;
 import com.example.tailormate.entity.Tailor;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CustomerRepository extends JpaRepository<Customers,Integer> {
-    Customers findByEmailAddress(String email);
+public interface TailorRepository extends JpaRepository<Tailor,Integer> {
+    Tailor findByEmailAddress(String email);
+
+    Boolean existsByEmailAddress(String email);
 }
+

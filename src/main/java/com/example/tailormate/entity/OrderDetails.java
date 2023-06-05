@@ -27,7 +27,7 @@ public class OrderDetails {
     @Column(name = "design_details_text", length = 100)
     private String designDetailsText;
 
-    @Column(name = "sample_img", length = 45)
+    @Column(name = "sample_img", length = 1000)
     private String sampleImg;
 
     @ManyToOne

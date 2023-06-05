@@ -17,29 +17,29 @@ public class Customers {
     @Column(name = "customer_id")
     private int customerId;
 
-    @Column(name = "email_address", length = 45)
+    @Column(name = "email_address", length = 225)
     private String emailAddress;
 
-    @Column(name = "username", length = 45)
+    @Column(name = "username", length = 225)
     private String username;
 
-    @Column(name = "bio", length = 45)
+    @Column(name = "bio", length = 225)
     private String bio;
 
-    @Column(name = "avatar", length = 45)
+    @Column(name = "avatar", length = 1000)
     private String avatar;
 
-    @Column(name = "password", length = 45)
+    @Column(name = "password", length = 225)
     private String password;
 
-    @Column(name = "created_at", length = 45)
+    @Column(name = "created_at", length = 225)
     private String createdAt;
 
-    @Column(name = "updated_at", length = 45)
+    @Column(name = "updated_at", length = 225)
     private String updatedAt;
 
-    @Column(name = "phone_number")
-    private Integer phoneNumber;
+    @Column(name = "phone_number",length = 225)
+    private String phoneNumber;
 
     // Constructors, getters, and setters
 
@@ -111,11 +111,11 @@ public class Customers {
         this.updatedAt = updatedAt;
     }
 
-    public Integer getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }
