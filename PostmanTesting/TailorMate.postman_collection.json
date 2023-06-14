@@ -1,0 +1,1458 @@
+{
+	"info": {
+		"_postman_id": "70b33263-8dc8-48ec-a9c6-0f93ab542276",
+		"name": "TailorMate",
+		"description": "The Official Endpoints for the TailorMate Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24204056"
+	},
+	"item": [
+		{
+			"name": "ProductType",
+			"item": [
+				{
+					"name": "AddProductType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productTypeTitle\":\"Garment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/productTypes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"productTypes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllProductType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/productTypes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"productTypes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProductType",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productTypeId\": 1,\r\n    \"productTypeTitle\": \"Garment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/productTypes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"productTypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProductTypebyID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/productTypes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"productTypes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductTypeById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Colors",
+			"item": [
+				{
+					"name": "GetAllColors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddColor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/colors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"colors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateColor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"colorTitle\":\"Red\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/colors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"colors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteColorByid",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/colors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"colors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetColorById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/colors/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"colors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sizes",
+			"item": [
+				{
+					"name": "GetAllSizes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/sizes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"sizes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddSizes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productType\":{\r\n    \"productTypeId\": 1,\r\n    \"productTypeTitle\": \"Garment\"\r\n        },\r\n    \"sizeTitle\":\"XL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/sizes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"sizes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSizeByID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sizeId\": 1,\r\n    \"productType\": {\r\n        \"productTypeId\": 2,\r\n        \"productTypeTitle\": \"Garment\"\r\n    },\r\n    \"sizeTitle\": \"XLL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/sizes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"sizes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSizeById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/sizes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"sizes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSizeById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Measurements",
+			"item": [
+				{
+					"name": "getAllMeasurements",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/measurements/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"measurements",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddMeasurements",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"productType\": {\r\n            \"productTypeId\": 1,\r\n            \"productTypeTitle\": \"Garment\"\r\n        },\r\n        \"measurementTitle\": \"Neck\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/measurements/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"measurements",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMeasurmentById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"measurementId\": 1,\r\n        \"productType\": {\r\n            \"productTypeId\": 1,\r\n            \"productTypeTitle\": \"Garment\"\r\n        },\r\n        \"measurementTitle\": \"Waist\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/measurements/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"measurements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMeasurmentById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/measurements/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"measurements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMeasurmentById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/measurements/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"measurements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GarmentTypes",
+			"item": [
+				{
+					"name": "GetAllGarmentTypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/garmentTypes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"garmentTypes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddGarmentType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"garmentTypeTitle\": \"Jacket\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/garmentTypes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"garmentTypes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateGarmentType",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"garmentTypeTitle\": \"Long Shirt\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/garmentTypes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"garmentTypes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getGarmentTypeById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/garmentTypes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"garmentTypes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/garmentTypes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"garmentTypes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tailor",
+			"item": [
+				{
+					"name": "getAllTailors",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getTailorById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "TailorLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rimmelasghar10gmail.com\",\r\n    \"password\":\"rimmelasghar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/tailor/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"tailor",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTailor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailAddress\": \"rimmelasghar40@gmail.com\", \r\n    \"username\": \"rimmel Asghar\",\r\n    \"bio\": \"Programmer in reaction\",\r\n    \"location\": \"remote\",\r\n    \"password\":\"rimmelasghar\",\r\n    \"avatar\": \"url:3040000\",\r\n    \"createdAt\": \"19:30\",\r\n    \"updatedAt\": \"11:50\",\r\n    \"areaOfSpecialization\": {\r\n        \"areaOfSpecializationId\": 1,\r\n        \"areaOfSpecializationTitle\": \"kurta\"\r\n    },\r\n    \"experience\": \"8 years\",\r\n    \"phoneNumber\": 33225931\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/tailor/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"tailor",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tailor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"emailAddress\": \"rimmelasghar40@gmail.com\",\r\n        \"username\": \"rimmel Asghar\",\r\n        \"bio\": \"Programmer in reaction\",\r\n        \"location\": \"remote\",\r\n        \"avatar\": \"url:50000\",\r\n        \"createdAt\": \"19:30\",\r\n        \"updatedAt\": \"11:50\",\r\n        \"areaOfSpecialization\": {\r\n            \"areaOfSpecializationId\": 1,\r\n            \"areaOfSpecializationTitle\": \"kurta\"\r\n        },\r\n        \"experience\": \"8 years\",\r\n        \"phoneNumber\": 33225931\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/tailor/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"tailor",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"youremail\",\r\n    \"currentPassword\":\"pss\",\r\n    \"newPassword\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/tailor/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"tailor",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rimmelasghar40@gmail.com\",\r\n    \"password\":\"register\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/tailor/forgotPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"tailor",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TailorSignup",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AreaOfSpecialization",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddAreaOfSpecialization",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"areaOfSpecializationTitle\": \"Jacket\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/area-of-specializations/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"area-of-specializations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAreaOfSpecialization",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"areaOfSpecializationTitle\": \"Kameez\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/area-of-specializations/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"area-of-specializations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/area-of-specializations/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"area-of-specializations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "getAllorders",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getOrdersByTailorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/orders/tailors/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"orders",
+								"tailors",
+								"2"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOrderById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateOrderById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"tailor\": {\r\n            \"tailorId\": 2,\r\n            \"emailAddress\": \"rimmelasghar3@gmail.com\",\r\n            \"username\": \"rimmel Asghar\",\r\n            \"bio\": \"Programmer in reaction\",\r\n            \"location\": \"remote\",\r\n            \"avatar\": \"url:3040000\",\r\n            \"createdAt\": \"19:30\",\r\n            \"updatedAt\": \"11:50\",\r\n            \"areaOfSpecialization\": {\r\n                \"areaOfSpecializationId\": 1,\r\n                \"areaOfSpecializationTitle\": \"kurta\"\r\n            },\r\n            \"experience\": \"8 years\",\r\n            \"phoneNumber\": 33225931\r\n        },\r\n        \"customer\": {\r\n            \"customerId\": 2,\r\n            \"bio\": \"customer 2\",\r\n            \"avatar\": \"url\",\r\n            \"emailAddress\": \"rimmelasghar4@gmail.com\",\r\n            \"username\": null,\r\n            \"createdAt\": \"10:30\",\r\n            \"updatedAt\": \"20:30\",\r\n            \"phoneNumber\": 22593149\r\n        },\r\n        \"createdAt\": \"10:30\",\r\n        \"expectedDeliveryAt\": \"01:05\",\r\n        \"status\": 1,\r\n        \"price\": 300.0,\r\n        \"deliveryAddress\": \"block-14\",\r\n        \"acceptedAt\": \"11:30\",\r\n        \"sentForDeliveryAt\": \"10:30\",\r\n        \"completedAt\": \"28:30\",\r\n        \"cancelledAt\": \"12:30\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/orders/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"orders",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOrdersByCustomerId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/orders/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": 1,\r\n    \"tailor\": {\r\n        \"tailorId\": 1,\r\n        \"emailAddress\": \"rimmelasghar40@gmail.com\",\r\n        \"username\": \"rimmel Asghar\",\r\n        \"bio\": \"Programmer in reaction\",\r\n        \"location\": \"remote\",\r\n        \"avatar\": \"https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png\",\r\n        \"createdAt\": \"19:30 2022-01-01\",\r\n        \"updatedAt\": \"11:50 2022-01-02\",\r\n        \"areaOfSpecialization\": {\r\n            \"areaOfSpecializationId\": 1,\r\n            \"areaOfSpecializationTitle\": \"Kurta\"\r\n        },\r\n        \"experience\": \"8 years\",\r\n        \"phoneNumber\": \"+923322593149\"\r\n    },\r\n    \"customer\": {\r\n        \"customerId\": 1,\r\n        \"bio\": \"A Customer that Can buy Anything that lies in Budget\",\r\n        \"avatar\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzHQv_th9wq3ivQ1CVk7UZRxhbPq64oQrg5Q&usqp=CAU\",\r\n        \"emailAddress\": \"rimmelasghar3@gmail.com\",\r\n        \"username\": \"rimmel Asghar\",\r\n        \"createdAt\": \"2023-06-11T12:00:00Z\",\r\n        \"updatedAt\": \"2023-06-11T12:00:00Z\",\r\n        \"phoneNumber\": \"3322593149\"\r\n    },\r\n    \"createdAt\": \"2022-01-01\",\r\n    \"expectedDeliveryAt\": \"2022-01-05\",\r\n    \"status\": 1,\r\n    \"price\": 100.0,\r\n    \"deliveryAddress\": \"123 Main St, City\",\r\n    \"acceptedAt\": \"2022-01-02\",\r\n    \"sentForDeliveryAt\": \"2022-01-03\",\r\n    \"completedAt\": \"2022-01-04\",\r\n    \"cancelledAt\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/orders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Get Reviews",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Tailor Reviews",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GetReviewsbyId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "AddReview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/reviews/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateReviewById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tailor\": {\r\n        \"tailorId\": 1,\r\n        \"emailAddress\": \"rimmelasghar40@gmail.com\",\r\n        \"username\": \"rimmel Asghar\",\r\n        \"bio\": \"Programmer in reaction\",\r\n        \"location\": \"remote\",\r\n        \"avatar\": \"https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png\",\r\n        \"createdAt\": \"19:30 2022-01-01\",\r\n        \"updatedAt\": \"11:50 2022-01-02\",\r\n        \"areaOfSpecialization\": {\r\n            \"areaOfSpecializationId\": 1,\r\n            \"areaOfSpecializationTitle\": \"Kurta\"\r\n        },\r\n        \"experience\": \"8 years\",\r\n        \"phoneNumber\": \"+923322593149\"\r\n    },\r\n    \"customer\": {\r\n        \"customerId\": 1,\r\n        \"bio\": \"A Customer that Can buy Anything that lies in Budget\",\r\n        \"avatar\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzHQv_th9wq3ivQ1CVk7UZRxhbPq64oQrg5Q&usqp=CAU\",\r\n        \"emailAddress\": \"rimmelasghar3@gmail.com\",\r\n        \"username\": \"rimmel Asghar\",\r\n        \"createdAt\": \"2023-06-11T12:00:00Z\",\r\n        \"updatedAt\": \"2023-06-11T12:00:00Z\",\r\n        \"phoneNumber\": \"3322593149\"\r\n    },\r\n    \"rating\": \"5\",\r\n    \"reviewText\": \"Tailor is Extremely nice and Talented\",\r\n    \"createdAt\": \"2022-01-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/reviews/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteReviewByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/reviews/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "getAllCustomers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "AddCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Rimmel Asghar\",\r\n    \"bio\": \"A Customer that Can buy Anything\",\r\n    \"avatar\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzHQv_th9wq3ivQ1CVk7UZRxhbPq64oQrg5Q&usqp=CAU\",\r\n    \"password\":\"rimmelasghar\",\r\n    \"emailAddress\": \"rimmelasghar3@gmail.com\",\r\n    \"username\": \"rimmel Asghar\",\r\n    \"createdAt\": \"2023-06-11T12:00:00Z\",\r\n    \"updatedAt\": \"2023-06-11T12:00:00Z\",\r\n    \"phoneNumber\": 3322593149\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/customers/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomerbyId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomerById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bio\": \"A Customer that Can buy Anything that lies in Budget\",\r\n    \"avatar\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzHQv_th9wq3ivQ1CVk7UZRxhbPq64oQrg5Q&usqp=CAU\",\r\n    \"emailAddress\": \"rimmelasghar3@gmail.com\",\r\n    \"username\": \"rimmel Asghar\",\r\n    \"createdAt\": \"2023-06-11T12:00:00Z\",\r\n    \"updatedAt\": \"2023-06-11T12:00:00Z\",\r\n    \"phoneNumber\": \"3322593149\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCustomerById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rimmelasghar3@gmail.com\",\r\n    \"password\":\"rimmelasghar30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/customers/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangePasswordCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rimmelasghar3@gmail.com\",\r\n    \"currentPassword\":\"rimmelasghar\",\r\n    \"newPassword\":\"rimmelasghar30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/customers/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ForgotPassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rimmelasghar3@gmail.com\",\r\n    \"password\":\"rimmelasghar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/customers/forgotPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customers",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Portfolio",
+			"item": [
+				{
+					"name": "GetAllPortfolioItems",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "AddPortfolioItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"portfolioItemId\": 1,\r\n  \"tailor\": {\r\n    \"tailorId\": 1,\r\n    \"emailAddress\": \"rimmelasghar40@gmail.com\",\r\n    \"username\": \"rimmel Asghar\",\r\n    \"bio\": \"Programmer in reaction\",\r\n    \"location\": \"remote\",\r\n    \"avatar\": \"https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png\",\r\n    \"createdAt\": \"19:30 2022-01-01\",\r\n    \"updatedAt\": \"11:50 2022-01-02\",\r\n    \"areaOfSpecialization\": {\r\n        \"areaOfSpecializationId\": 1,\r\n        \"areaOfSpecializationTitle\": \"kurta\"\r\n    },\r\n    \"experience\": \"8 years\",\r\n    \"phoneNumber\": \"+923322593149\"\r\n},\r\n  \"titleText\": \"Kurta\",\r\n  \"image\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXpUtwRulS_JReXjgaVUCrFE4_oJOOhIZm5A&usqp=CAU\",\r\n  \"description\": \"I can designed beautiful kurta\",\r\n  \"createdAt\": \"19:30 2022-01-03\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/portfolioItems/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"portfolioItems",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePortfolioItem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"portfolioItemId\": 1,\r\n        \"tailor\": {\r\n            \"tailorId\": 1,\r\n            \"emailAddress\": \"rimmelasghar40@gmail.com\",\r\n            \"username\": \"rimmel Asghar\",\r\n            \"bio\": \"Programmer in reaction\",\r\n            \"location\": \"remote\",\r\n            \"avatar\": \"https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png\",\r\n            \"createdAt\": \"19:30 2022-01-01\",\r\n            \"updatedAt\": \"11:50 2022-01-02\",\r\n            \"areaOfSpecialization\": {\r\n                \"areaOfSpecializationId\": 1,\r\n                \"areaOfSpecializationTitle\": \"Kurta\"\r\n            },\r\n            \"experience\": \"8 years\",\r\n            \"phoneNumber\": \"+923322593149\"\r\n        },\r\n        \"titleText\": \"Kurta\",\r\n        \"image\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXpUtwRulS_JReXjgaVUCrFE4_oJOOhIZm5A&usqp=CAU\",\r\n        \"description\": \"I can designed beautiful kurta in a reasonable Price\",\r\n        \"createdAt\": \"19:30 2022-01-03\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/portfolioItems/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"portfolioItems",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/portfolioItems/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"portfolioItems",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Details",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "AddOrderDetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderDetailId\": 1,\r\n  \"order\": {\r\n    \"orderId\": 1,\r\n    \"orderNumber\": \"ORD001\",\r\n    \"customer\": {\r\n      \"customerId\": 1,\r\n      \"firstName\": \"John\",\r\n      \"lastName\": \"Doe\",\r\n      \"emailAddress\": \"john.doe@example.com\",\r\n      \"phoneNumber\": \"+1234567890\",\r\n      \"createdAt\": \"2022-01-01\",\r\n      \"updatedAt\": \"2022-01-02\"\r\n    },\r\n    \"orderDate\": \"2022-01-03\",\r\n    \"totalAmount\": 100.0,\r\n    \"status\": \"PENDING\",\r\n    \"createdAt\": \"2022-01-04\",\r\n    \"updatedAt\": \"2022-01-05\"\r\n  },\r\n  \"productType\": {\r\n    \"productTypeId\": 1,\r\n    \"productTypeTitle\": \"Shirt\"\r\n  },\r\n  \"designDetailsText\": \"Sample design details\",\r\n  \"sampleImg\": \"sample_image.jpg\",\r\n  \"garmentType\": {\r\n    \"garmentTypeId\": 1,\r\n    \"garmentTypeTitle\": \"Men's Wear\"\r\n  },\r\n  \"color\": {\r\n    \"colorId\": 1,\r\n    \"colorName\": \"Blue\",\r\n    \"colorCode\": \"#0000FF\"\r\n  },\r\n  \"size\": {\r\n    \"sizeId\": 1,\r\n    \"sizeTitle\": \"Small\"\r\n  },\r\n  \"instructionsText\": \"Sample instructions\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/order-details/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"order-details",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
