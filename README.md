@@ -1569,4 +1569,4 @@ URL: http://localhost:8081/api/order-details/
 ---
 [Back to top](#tailormate)
 
->Generated at 2023-06-14 20:38:28 by [docgen](https://github.com/thedevsaddam/docgen)
+Coded by Rimmel Asghar with ❤️
